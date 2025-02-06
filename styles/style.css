@@ -1,15 +1,113 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-RegularItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+body {
+    font-family: 'Cera Pro';
+    color: rgba(61, 61, 61, 1);
+    font-size: 16px;
+    line-height: 1.7;
+    /* font-weight: 400; */
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     
 }
 
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
 
 .header{
     font-size: 0;
     border-bottom: 1px solid rgba(70, 163, 88, 50%);
     padding-top: 30px;
-    padding-bottom: 17px;
+    padding-bottom: 25px;
     margin-bottom: 12px;
 }
 
@@ -23,18 +121,20 @@
     text-decoration: none;
     border: none;
     cursor: pointer;
+    /* margin-top: 10px; */
     
     
 }
 
-.logo{
+.logo {
     width: 150px;
+    margin-top: 10px; 
     
 
 }
 
 .btn{
-    max-width: 100px;
+    min-width: 100px;
     background: #46a358;
     color: #fff;
     border: 1px solid #46a358;
@@ -42,6 +142,7 @@
     padding: 6px 10px;
     text-decoration: none;
     text-align: center;
+    font-weight: 500;
 
 }
 .btn:hover {
@@ -79,16 +180,16 @@
 
 .header-nav__list a {
     text-decoration: none;
-    color: #3d3d3d;
+    color: #767474;
 }
 
 .banner {
+    font-size: 14px;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 30px;
-    background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
-    ; */
+    margin-bottom: 50px;
 }
 
 .banner__text,
@@ -105,8 +206,190 @@
 }
 .title-add {
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 .banner h1 {
     text-transform: uppercase;
     font-size: 70px;
+    line-height: 1;
+    font-weight: 900;
+    margin: 0 0 10px;
 }
+
+h1 mark{
+    color: #46A358;
+    background: none;
+
+}
+
+.banner h1+p {
+    margin-top: 0;
+    margin-bottom: 44px;
+    font-size: 16px;
+    color: #727272;
+}
+
+.banner .btn {
+    text-transform: uppercase;
+    padding: 6px 10px;
+    min-width: 140px;
+    font-weight: 700;
+}
+
+.sidebar {
+    float: left;
+    width: 310px;
+    padding: 14px 18px;
+    font-size: 15px;
+    
+}
+
+
+.sidebar_cat {
+    list-style-type: none;
+    padding: 0 0 0 12px;
+    margin: 0;
+    list-style: none;
+
+}
+
+.sidebar_cat .active  {
+color: #46a358;
+font-weight: 700;
+}
+
+.sidebar_cat  li {
+    margin-bottom: 20px;
+}
+.sidebar_cat a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar_cat a:hover {
+    color: #46a358;
+}
+
+.sidebar h4 {
+    margin-top: 0;
+}
+
+.content {
+    float: right;
+    width: calc(100% - 310px);
+}
+
+/* styles for sorting */
+
+.product-sort__filter {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-sort__filter li {
+    display: inline-block;
+    margin-right: 37px;
+}
+
+.product-sort__filter li.active {
+    font-weight: 700;
+    color:#46A358;
+}
+
+.product-sort__filter a:hover {
+    color:#46A358;
+}
+ 
+.product-sort__filter a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-sort__sorting {
+    float: right;
+}
+
+.product-sort__sorting__title, 
+.product-sort__select {  
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.product-sort__sorting__title {
+    margin-right: 10px;
+}
+
+.product-sort__option:after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: url('../images/icon2.svg');
+}
+
+/* product__list */
+
+.product__list {
+    list-style-type: none;
+    margin: 0 0 50px;
+    padding: 0;
+}
+
+.product__item {
+    width: 33.33% ;
+}
+
+.product_img {
+    background: rgba(251, 251, 251, 1);
+
+}
+
+.product__item h5 {
+    margin: 0;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #46A358;
+}
+
+.pages  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    
+}
+
+.product__item h5 {
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.pages li {
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.pages li.active a,
+.pages a:hover {
+    background: rgba(70, 163, 88, 1);
+    color: #fff;
+}
+
+.pages a {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 4px;
+    
+    border: 1px solid rgba(229, 229, 229, 1);
+    padding-top: 8px;
+    text-decoration: none;
+    color: inherit;
+    }
